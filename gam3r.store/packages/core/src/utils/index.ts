@@ -1,3 +1,3 @@
-import Moeda from "./Moeda";
+import Moeda from './Moeda'
 
 export { Moeda }

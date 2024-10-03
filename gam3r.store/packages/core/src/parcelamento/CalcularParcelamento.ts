@@ -17,15 +17,15 @@ export default class CalcularParcelamento {
             valorParcela: this.comDuasCasasDecimais(totalComJuros / qtdeParcelas),
             valorTotal: this.comDuasCasasDecimais(totalComJuros),
             qtdeParcelas,
-            taxaJuros
+            taxaJuros,
         }
     }
 
-    private calcularJurosCompostos(valorTotal: number, taxaMensal: number, qtdeParcelas: number): number {
+    private calcularJurosCompostos(valorTotal: number, taxaMensal: number, qtdeParcelas: number) {
         return valorTotal * Math.pow(1 + taxaMensal, qtdeParcelas)
     }
 
     private comDuasCasasDecimais(valor: number): number {
         return Math.round(valor * 100) / 100
-    }    
+    }
 }
