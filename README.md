@@ -84,3 +84,151 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIByzM5LryGw9XmSrBDc4h4INccv31UryPEvZKW1aQqEb cookie.maia@gmail.com
+DATABASE_URL=postgres://postgres:lEON1478$$$@gam3rstore-db.cl8sycgagm18.sa-east-1.rds.amazonaws.com/gam3rstore-db
+http://ec2-54-233-5-134.sa-east-1.compute.amazonaws.com:3005/produtos
+
+Configurando deploy AWS (https://www.youtube.com/watch?v=Mlclee1fjpA):
+
+"instalar o PuTTY"
+
+"criar um Pares de chaves por ppk"
+https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#KeyPairs:
+
+"criar Instancia ec2 usando Security groups default e a chave ppk criada"
+https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#Instances:
+
+"abrir porta ssh no ec2 Security groups default"
+https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#SecurityGroups:
+
+"criar o banco de dados postgree, não aurora por custo grátis"
+https://sa-east-1.console.aws.amazon.com/rds/home?region=sa-east-1#databases:
+
+"conectar usando o PuTTY, com o endereço gerado para o ec2 e a chave"
+https://www.wikihow.com/Use-Putty-in-Windows
+
+![image](https://github.com/user-attachments/assets/e47827ac-a15f-49eb-a585-3eaf2a72a8d5)
+
+![image](https://github.com/user-attachments/assets/21503b8e-7659-4a25-88d3-2010aa51e160)
+
+![image](https://github.com/user-attachments/assets/65a6c962-b325-4791-a11d-fe7824a40b06)
+
+![image](https://github.com/user-attachments/assets/d253b015-b349-4547-a488-333629cc6520)
+
+ec2-user
+
+sudo yum update
+
+sudo yum install git
+
+sudo yum install nodejs
+
+node --version
+
+cd .ssh
+
+ssh-keygen -t ed25519 -C "cookie.maia@gmail.com"
+
+ls
+
+"configurar a chave publica no github"
+
+vi config
+
+a
+
+Host github.com
+ IgnoreUnknown UseKeychain
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/github
+ 
+ESC
+
+:wq
+
+cat config
+ 
+ssh -T git@github.com
+
+yes
+
+cd ~
+
+git clone git@github.com:leonardojgm/Gamer-Store-Avancada
+
+sudo npm i -g yarn
+
+cd Gamer-Store-Avancada
+
+yarn
+
+yarn build
+
+cd apps/backend
+
+vi .env
+
+a
+
+DATABASE_URL=postgres://postgres:xxx@gam3rstore-db.xxxx.sa-east-1.rds.amazonaws.com/gam3rstore-db
+
+ESC
+
+:wq
+
+cat .env
+
+cat src/main.ts
+
+pwd
+
+npx prisma migrate dev
+
+cd ..
+
+cd ..
+
+sudo npm install pm2 -g
+
+cd apps/backend
+
+pm2 start build/src/main.js --name backend
+
+pm2 status
+
+"abrir porta 3005 no ec2 Security groups default"
+
+cd ..
+
+cd frontend
+
+yarn build
+
+pm2 start yarn -- start --name frontend
+
+"abrir porta 3000 no ec2 Security groups default"
+
+vi .env
+
+a
+
+NEXT_PUBLIC_API_URL=http://ec2-54-233-5-134.sa-east-1.compute.amazonaws.com:3005
+
+ESC
+
+:wq
+
+cat .env
+
+pm2 restart 1
+
+pm2 startup systemd
+
+pm2 save
+
+sudo su
+
+exit
+
