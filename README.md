@@ -1,6 +1,8 @@
 # Gamer Store Avançada
 Desenvolvido durante o evento Formação DEV - Trilha Profissional de Mercado
 
+![image](https://github.com/user-attachments/assets/2f240738-a896-4c3e-b946-a7e002dc6d89)
+
 # Turborepo starter
 
 This is an official starter Turborepo.
