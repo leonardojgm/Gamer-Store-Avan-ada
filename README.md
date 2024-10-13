@@ -85,10 +85,6 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
--ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIByzM5LryGw9XmSrBDc4h4INccv31UryPEvZKW1aQqEb cookie.maia@gmail.com
-DATABASE_URL=postgres://postgres:lEON1478$$$@gam3rstore-db.cl8sycgagm18.sa-east-1.rds.amazonaws.com/gam3rstore-db
-http://ec2-54-233-5-134.sa-east-1.compute.amazonaws.com:3005/produtos
-
 Configurando deploy AWS (https://www.youtube.com/watch?v=Mlclee1fjpA):
 
 "instalar o PuTTY"
@@ -214,7 +210,7 @@ vi .env
 
 a
 
-NEXT_PUBLIC_API_URL=http://ec2-54-233-5-134.sa-east-1.compute.amazonaws.com:3005
+NEXT_PUBLIC_API_URL=http://xxxx.sa-east-1.compute.amazonaws.com:3005
 
 ESC
 
