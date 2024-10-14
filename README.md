@@ -1,7 +1,41 @@
 # Gamer Store Avançada
 Desenvolvido durante o evento Formação DEV - Trilha Profissional de Mercado
 
+## React
+
 ![image](https://github.com/user-attachments/assets/2f240738-a896-4c3e-b946-a7e002dc6d89)
+
+![image](https://github.com/user-attachments/assets/400d0e68-13f7-48b0-b1fc-5b015b50fbf9)
+
+![image](https://github.com/user-attachments/assets/b95ae4e7-1235-4de5-86ab-73ecaac06f01)
+
+![image](https://github.com/user-attachments/assets/aff55cbb-a25d-48c2-9431-ab0352a25c90)
+
+![image](https://github.com/user-attachments/assets/3576668d-9d5c-4ec4-ae0c-655f2bd837ee)
+
+![image](https://github.com/user-attachments/assets/8cf7d76f-2b35-469f-b3a7-a7f4fd1989c8)
+
+![image](https://github.com/user-attachments/assets/bada99da-c7f7-4f6d-b90e-2d174f2db15e)
+
+![image](https://github.com/user-attachments/assets/8f178995-269f-4be4-a16e-d2c51961fbaa)
+
+![image](https://github.com/user-attachments/assets/0a73ca17-e460-447a-aa98-bc5c09cbe07d)
+
+## React Native
+
+![image](https://github.com/user-attachments/assets/0c249c26-d6cd-45ea-be70-dece046f7c8f)
+
+![image](https://github.com/user-attachments/assets/73792485-5a23-40ef-aeb7-21e27196cd84)
+
+![image](https://github.com/user-attachments/assets/4e6e23e3-e485-45dd-af14-7fc6b90b6dd6)
+
+![image](https://github.com/user-attachments/assets/7c1bb9d0-38c9-418d-8295-4f9d5aef4b5c)
+
+![image](https://github.com/user-attachments/assets/119186d5-1bf5-46ac-93c3-6196b21c90e4)
+
+![image](https://github.com/user-attachments/assets/a17f7378-613d-4d95-adbc-17da906110cc)
+
+![image](https://github.com/user-attachments/assets/3032fda3-ba3d-43ee-92d0-2b9697f55f41)
 
 # Turborepo starter
 
@@ -85,24 +119,19 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
 
-Configurando deploy AWS (https://www.youtube.com/watch?v=Mlclee1fjpA):
+## Configurando deploy AWS (https://www.youtube.com/watch?v=Mlclee1fjpA):
 
-"instalar o PuTTY"
+1. Instalar o PuTTY
 
-"criar um Pares de chaves por ppk"
-https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#KeyPairs:
+2. Criar um Pares de chaves por ppk (https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#KeyPairs:)
 
-"criar Instancia ec2 usando Security groups default e a chave ppk criada"
-https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#Instances:
+3. Criar Instancia ec2 usando Security groups default e a chave ppk criada (https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#Instances:)
+ 
+4. Abrir porta ssh no ec2 Security groups default (https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#SecurityGroups:)
 
-"abrir porta ssh no ec2 Security groups default"
-https://sa-east-1.console.aws.amazon.com/ec2/home?region=sa-east-1#SecurityGroups:
+5. Criar o banco de dados postgree, não aurora por custo grátis (https://sa-east-1.console.aws.amazon.com/rds/home?region=sa-east-1#databases:)
 
-"criar o banco de dados postgree, não aurora por custo grátis"
-https://sa-east-1.console.aws.amazon.com/rds/home?region=sa-east-1#databases:
-
-"conectar usando o PuTTY, com o endereço gerado para o ec2 e a chave"
-https://www.wikihow.com/Use-Putty-in-Windows
+6. conectar usando o PuTTY, com o endereço gerado para o ec2 e a chave (https://www.wikihow.com/Use-Putty-in-Windows)
 
 ![image](https://github.com/user-attachments/assets/e47827ac-a15f-49eb-a585-3eaf2a72a8d5)
 
@@ -112,121 +141,124 @@ https://www.wikihow.com/Use-Putty-in-Windows
 
 ![image](https://github.com/user-attachments/assets/d253b015-b349-4547-a488-333629cc6520)
 
-ec2-user
+7. ec2-user
 
-sudo yum update
+8. sudo yum update
 
-sudo yum install git
+9. sudo yum install git
 
-sudo yum install nodejs
+10. sudo yum install nodejs
 
-node --version
+11. node --version
 
-cd .ssh
+12. cd .ssh
 
-ssh-keygen -t ed25519 -C "cookie.maia@gmail.com"
+13. ssh-keygen -t ed25519 -C "cookie.maia@gmail.com"
 
-ls
+14. ls
 
-"configurar a chave publica no github"
+15. Configurar a chave publica no github
 
 vi config
 
-a
+16. a
 
+17. Conteudo da configuração do github
+```
 Host github.com
  IgnoreUnknown UseKeychain
  AddKeysToAgent yes
  UseKeychain yes
  IdentityFile ~/.ssh/github
+```
  
-ESC
+18. ESC
 
-:wq
+19. :wq
 
-cat config
+20. cat config
  
-ssh -T git@github.com
+21. ssh -T git@github.com
 
-yes
+22. yes
 
-cd ~
+23. cd ~
 
-git clone git@github.com:leonardojgm/Gamer-Store-Avancada
+24. git clone git@github.com:leonardojgm/Gamer-Store-Avancada
 
-sudo npm i -g yarn
+25. sudo npm i -g yarn
 
-cd Gamer-Store-Avancada
+26. cd Gamer-Store-Avancada
 
-yarn
+27. yarn
 
-yarn build
+28. yarn build
 
-cd apps/backend
+29. cd apps/backend
 
-vi .env
+30. vi .env
 
-a
+31. a
 
-DATABASE_URL=postgres://postgres:xxx@gam3rstore-db.xxxx.sa-east-1.rds.amazonaws.com/gam3rstore-db
+32. DATABASE_URL=postgres://postgres:xxx@gam3rstore-db.xxxx.sa-east-1.rds.amazonaws.com/gam3rstore-db
 
-ESC
+33. ESC
 
-:wq
+34. :wq
 
-cat .env
+35. cat .env
 
-cat src/main.ts
+36. cat src/main.ts
 
-pwd
+37. pwd
 
-npx prisma migrate dev
+38. npx prisma migrate dev
+ 
+39. cd ..
 
-cd ..
+40. cd ..
 
-cd ..
+41. sudo npm install pm2 -g
 
-sudo npm install pm2 -g
+42. cd apps/backend
 
-cd apps/backend
+43. pm2 start build/src/main.js --name backend
 
-pm2 start build/src/main.js --name backend
+44. pm2 status
 
-pm2 status
+45. Abrir porta 3005 no ec2 Security groups default
 
-"abrir porta 3005 no ec2 Security groups default"
+46. cd ..
 
-cd ..
+47. cd frontend
 
-cd frontend
+48. yarn build
 
-yarn build
+49. pm2 start yarn -- start --name frontend
 
-pm2 start yarn -- start --name frontend
+50. Abrir porta 3000 no ec2 Security groups default
 
-"abrir porta 3000 no ec2 Security groups default"
+51. vi .env
 
-vi .env
+52. a
 
-a
+53. NEXT_PUBLIC_API_URL=http://xxxx.sa-east-1.compute.amazonaws.com:3005
 
-NEXT_PUBLIC_API_URL=http://xxxx.sa-east-1.compute.amazonaws.com:3005
+54. ESC
 
-ESC
+55. :wq
 
-:wq
+56. cat .env
 
-cat .env
+57. pm2 restart 1
 
-pm2 restart 1
+58. pm2 startup systemd
 
-pm2 startup systemd
+59. pm2 save
 
-pm2 save
+60. sudo su
 
-sudo su
-
-exit
+61. exit
 
 AWS: http://ec2-18-228-118-212.sa-east-1.compute.amazonaws.com:3000
 
