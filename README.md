@@ -228,3 +228,7 @@ sudo su
 
 exit
 
+AWS: http://ec2-18-228-118-212.sa-east-1.compute.amazonaws.com:3000/
+Vercel: https://gamer-store-avancada.vercel.app/
+API: http://ec2-18-228-118-212.sa-east-1.compute.amazonaws.com:3005/produtos
+
